@@ -24,6 +24,11 @@ Kionix K2HH chip, register-compatible with the ST LIS2HH12.
 > as a Galaxy Book 10.6 (SM-W620). It is an SM-W720 (Galaxy Book 12): 11.9″
 > 2160×1440 panel, i5-7200U, board `SM-W720`. Not tested on a 10.6.
 
+> **Fedora only.** Tested on Fedora 44 only. The kernel patches and DKMS build should work on
+> other distributions, but the install scripts are written for Fedora (`dnf`/`rpm`,
+> `kernel-devel`, kernels found via `/lib/modules/<version>/vmlinuz`).
+> On other distributions they are untested and will likely fail.
+
 ## What it does
 
 `install.sh`:
