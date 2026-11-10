@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
+# Remove the SAM0201 accelerometer driver; the stock st_accel is used again
+# after a reboot (without SAM0201 support: no auto-rotation).
 set -euo pipefail
-PKG_NAME="st-accel-sam0201"
-PKG_VERSION="1.0"
-
-sudo modprobe -r st_accel_i2c st_accel 2>/dev/null || true
-sudo dkms remove -m "$PKG_NAME" -v "$PKG_VERSION" --all
-sudo rm -rf "/usr/src/${PKG_NAME}-${PKG_VERSION}"
-echo "Removed. In-kernel stock st_accel/st_accel_i2c will be used (without SAM0201 support) on next load."
+HERE="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+"$HERE/common/uninstall-dkms.sh" st-accel-sam0201
