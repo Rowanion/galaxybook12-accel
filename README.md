@@ -126,6 +126,11 @@ into DKMS, so it rebuilds automatically after kernel updates without extra
 steps. Packaged for Fedora, confirmed here to apply cleanly (zero fuzz) and
 work on kernels 7.2.15 and 7.3.3.
 
+## AI assistance
+
+Parts of this repository were developed with AI assistance (Claude by
+Anthropic). Every change was reviewed and tested on real SM-W720 hardware.
+
 ## License
 
 GPL-2.0-only, matching the Linux kernel.
